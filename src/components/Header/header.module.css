@@ -1,0 +1,9 @@
+.wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    background: silver;
+    border-bottom: 2px solid darkgray;
+}
+
