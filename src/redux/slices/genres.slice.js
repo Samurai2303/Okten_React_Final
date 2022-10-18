@@ -3,8 +3,7 @@ import {genresService} from "../../services";
 
 let initialState = {
     genres: [],
-    genresError: null,
-    selectedGenre: []
+    genresError: null
 };
 
 let getAll = createAsyncThunk(
@@ -33,11 +32,10 @@ let genresSlice = createSlice({
             })
 });
 
-let {reducer: genresReducer, actions: {}} = genresSlice;
+let {reducer: genresReducer} = genresSlice;
 
 let genresActions = {
-    getAll,
-
+    getAll
 };
 
 export {genresReducer, genresActions};

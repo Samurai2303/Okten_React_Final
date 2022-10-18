@@ -23,7 +23,7 @@ let getKeywordsMovies = createAsyncThunk(
     async ({keyword}, {rejectWithValue}) => {
         try {
             let {data} = await moviesService.getKeywordsMovies(keyword);
-            return data;
+            return data.results;
         } catch (e) {
             return rejectWithValue(e.response.data);
         }
@@ -42,6 +42,19 @@ let getMovieInfo = createAsyncThunk(
     }
 );
 
+let getMovies = createAsyncThunk(
+    'moviesSlice/getMovies',
+    async (_, {rejectWithValue, getState}) => {
+        try {
+            let {moviesReducer} = getState();
+            let {data} = await moviesService.getMovies(moviesReducer.queryPage, moviesReducer.querySort, moviesReducer.queryGenre, moviesReducer.queryAdult);
+            return data.results;
+        } catch (e) {
+            return rejectWithValue(e.response.data);
+        }
+    }
+)
+
 let moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
@@ -51,6 +64,15 @@ let moviesSlice = createSlice({
         },
         addMovie: (state, action) => {
             state.movies.push(action.payload);
+        },
+        setQuerySort: (state, action) => {
+            state.querySort = action.payload;
+        },
+        setQueryAdult: (state, action) => {
+            state.queryAdult = action.payload;
+        },
+        setQueryGenre: (state, action) => {
+            state.queryGenre = action.payload;
         }
     },
     extraReducers: builder =>
@@ -77,16 +99,33 @@ let moviesSlice = createSlice({
             .addCase(getMovieInfo.pending, (state) => {
                 state.movieLoading = true;
             })
+            .addCase(getMovies.fulfilled, (state, action) => {
+                state.movies = action.payload;
+                state.moviesLoading = false;
+            })
+            .addCase(getMovies.rejected, (state, action) => {
+                state.moviesError = action.payload;
+                state.moviesLoading = false;
+            })
+            .addCase(getMovies.pending, (state) => {
+                state.moviesLoading = true;
+            })
 });
 
-let {reducer: moviesReducer, actions: {clearMovies, addMovie}} = moviesSlice;
+let {
+    reducer: moviesReducer,
+    actions: {clearMovies, addMovie, setQuerySort, setQueryAdult, setQueryGenre}
+} = moviesSlice;
 
 let moviesActions = {
     getKeywordsMovies,
     getMovieInfo,
+    getMovies,
     clearMovies,
     addMovie,
-
+    setQuerySort,
+    setQueryAdult,
+    setQueryGenre
 };
 
 export {moviesReducer, moviesActions};

@@ -1,9 +1,9 @@
-function PosterPreview() {
+import {posterUrl} from "../../configs";
+
+function PosterPreview({path}) {
 
   return (
-      <div>
-
-      </div>
+      <img src={`${posterUrl}${path}`} alt="Poster img"/>
   );
 }
 

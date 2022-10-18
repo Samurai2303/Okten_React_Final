@@ -6,16 +6,18 @@ import {moviesActions} from "../../redux";
 
 function Header() {
 
-    let {reset, register, handleSubmit, formState: {isValid}} = useForm();
+    let {reset, register, handleSubmit, formState: {isValid}} = useForm({mode: "all"});
     let dispatch = useDispatch();
-    let {keywordsMovies, movie} = useSelector(state => state.moviesReducer);
+    let {keywordsMovies, movie, keywordsMoviesLoading, keywordsMoviesError} = useSelector(state => state.moviesReducer);
 
     async function submit(data) {
+        // await dispatch(moviesActions.clearMovies());
         await dispatch(moviesActions.getKeywordsMovies({keyword: data.movieName}));
-        await dispatch(moviesActions.clearMovies());
-        for (let movieItem of keywordsMovies) {
-            await dispatch(moviesActions.getMovieInfo({id: movieItem.id}));
-            await dispatch(moviesActions.addMovie(movie));
+        if (keywordsMovies.length) {
+            for (let movieItem of keywordsMovies) {
+                await dispatch(moviesActions.getMovieInfo({id: movieItem.id}));
+                await dispatch(moviesActions.addMovie(movie));
+            }
         }
         reset();
     }
@@ -27,6 +29,8 @@ function Header() {
                 <input type="text" placeholder={'Enter movie name'} {...register('movieName', {required: true})}/>
                 <button disabled={!isValid}>Search</button>
             </form>
+            {keywordsMoviesLoading && <p>Loading...</p>}
+            {keywordsMoviesError && <p>Error(</p>}
             <UserInfo/>
         </div>
     );

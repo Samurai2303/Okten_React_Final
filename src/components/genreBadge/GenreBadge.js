@@ -1,9 +1,7 @@
-function GenreBadge() {
+function GenreBadge({genres}) {
 
   return (
-      <div>
-
-      </div>
+      <div>{genres}</div>
   );
 }
 
