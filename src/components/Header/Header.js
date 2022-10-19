@@ -3,22 +3,20 @@ import css from './header.module.css';
 import {UserInfo} from "../userInfo/UserInfo";
 import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux";
+import {useNavigate} from "react-router-dom";
 
 function Header() {
 
+    let navigate = useNavigate();
     let {reset, register, handleSubmit, formState: {isValid}} = useForm({mode: "all"});
     let dispatch = useDispatch();
-    let {keywordsMovies, movie, keywordsMoviesLoading, keywordsMoviesError} = useSelector(state => state.moviesReducer);
+    let {moviesLoading} = useSelector(state => state.moviesReducer);
 
     async function submit(data) {
-        // await dispatch(moviesActions.clearMovies());
-        await dispatch(moviesActions.getKeywordsMovies({keyword: data.movieName}));
-        if (keywordsMovies.length) {
-            for (let movieItem of keywordsMovies) {
-                await dispatch(moviesActions.getMovieInfo({id: movieItem.id}));
-                await dispatch(moviesActions.addMovie(movie));
-            }
-        }
+        dispatch(moviesActions.resetPage());
+        navigate('/');
+        await dispatch(moviesActions.searchMovies({movieName: data.movieName}));
+        dispatch(moviesActions.setFlag({type: 'search', movieName: data.movieName}));
         reset();
     }
 
@@ -29,8 +27,7 @@ function Header() {
                 <input type="text" placeholder={'Enter movie name'} {...register('movieName', {required: true})}/>
                 <button disabled={!isValid}>Search</button>
             </form>
-            {keywordsMoviesLoading && <p>Loading...</p>}
-            {keywordsMoviesError && <p>Error(</p>}
+            {moviesLoading && <p>Loading...</p>}
             <UserInfo/>
         </div>
     );

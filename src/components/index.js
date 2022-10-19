@@ -9,5 +9,4 @@ export * from './starsRating/StarsRating';
 export * from './userInfo/UserInfo';
 export * from './adultWarning/AdultWarning';
 export * from './addToFavourite/AddToFavourite';
-
-
+export * from './switcher/Switcher';

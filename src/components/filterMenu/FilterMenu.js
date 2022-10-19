@@ -24,7 +24,9 @@ function FilterMenu() {
         genresVariable = genresVariable.replace(',', '');
         dispatch(moviesActions.setQueryGenre(genresVariable));
         dispatch(moviesActions.setQueryAdult(data.adult));
+        dispatch(moviesActions.resetPage());
         await dispatch(moviesActions.getMovies());
+        dispatch(moviesActions.setFlag({type: 'discover', movieName: null}));
     }
 
     function change(event) {
@@ -38,7 +40,8 @@ function FilterMenu() {
                     <p>Search by genres</p>
                     {genresError && <p>Error(</p>}
                     {genres.length ? genres.map((value, index) => <label key={index}>
-                        <input key={index} type={'checkbox'} {...register(`${value.name}`)}/> {value.name} </label>) : false}
+                        <input key={index} type={'checkbox'} {...register(`${value.name}`)}/> {value.name}
+                    </label>) : false}
                 </div>
                 <label><input type='checkbox' {...register('adult')}/>Show adult films</label>
                 <select onChange={(event) => change(event)}>

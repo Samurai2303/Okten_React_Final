@@ -2,9 +2,11 @@ import {posterUrl} from "../../configs";
 
 function PosterPreview({path}) {
 
-  return (
-      <img src={`${posterUrl}${path}`} alt="Poster img"/>
-  );
+    return (
+        <div>
+            {path ? <img src={`${posterUrl}${path}`} alt="Poster img"/> : <div>No poster found...</div>}
+        </div>
+    );
 }
 
 export {PosterPreview};
