@@ -1,0 +1,36 @@
+.wrap{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 3px solid cyan;
+    height: 400px;
+    padding: 10px;
+    width: 250px;
+    margin: 10px;
+    background: #0f1724;
+}
+
+.titleAndA{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: cyan;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 2px;
+}
+
+.starsAndF{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+

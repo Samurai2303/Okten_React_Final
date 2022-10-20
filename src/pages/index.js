@@ -1,3 +1,3 @@
-export * from './MoviesPage';
-export * from './MovieInfoPage';
+export * from './moviesPage/MoviesPage';
+export * from './movieInfoPage/MovieInfoPage';
 

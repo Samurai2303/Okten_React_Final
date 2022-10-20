@@ -2,6 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {genresActions, moviesActions} from "../../redux";
 import {useForm} from "react-hook-form";
+import css from './filterMenu.module.css';
 
 function FilterMenu() {
 
@@ -33,11 +34,17 @@ function FilterMenu() {
         dispatch(moviesActions.setQuerySort(event.target.value));
     }
 
+    function arrowClick() {
+        document.getElementById('genresWrap').classList.toggle(css.opened);
+    }
+
     return (
-        <div>
+        <div className={css.wrap}>
             <form onSubmit={handleSubmit(submit)}>
-                <div>
-                    <p>Search by genres</p>
+                <div className={css.genresWrap} id={'genresWrap'}>
+                    <p className={css.searchByGenres}>Search by genres <i
+                            className={'fa-solid fa-arrow-down'}
+                            onClick={() => arrowClick()}></i></p>
                     {genresError && <p>Error(</p>}
                     {genres.length ? genres.map((value, index) => <label key={index}>
                         <input key={index} type={'checkbox'} {...register(`${value.name}`)}/> {value.name}

@@ -1,0 +1,18 @@
+.loading {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top: 4px solid cyan;
+    border-bottom: 4px solid cyan;
+    animation: rotate 700ms linear infinite;
+    box-shadow: 0 0 10px 5px cyan, 0 0 10px 5px cyan inset;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

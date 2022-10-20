@@ -5,6 +5,7 @@ import {StarsRating} from "../starsRating/StarsRating";
 import {AddToFavourite} from "../addToFavourite/AddToFavourite";
 import {useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
+import css from './movieListCard.module.css';
 
 function MoviesListCard({movie}) {
 
@@ -23,14 +24,14 @@ function MoviesListCard({movie}) {
     }
 
     return (
-        <div onClick={() => click()}>
-            <PosterPreview path={movie.poster_path ? movie.poster_path : movie.backdrop_path}/>
-            <div>
-                <p>{movie.title}</p>
+        <div onClick={() => click()} className={css.wrap}>
+            <PosterPreview path={movie.poster_path ? movie.poster_path : movie.backdrop_path} width={'small'}/>
+            <div className={css.titleAndA}>
+                <p className={css.title}>{movie.title}</p>
                 {movie.adult && <AdultWarning/>}
             </div>
             <GenreBadge genres={genres}/>
-            <div>
+            <div className={css.starsAndF}>
                 <StarsRating rating={movie.vote_average}/>
                 <AddToFavourite/>
             </div>

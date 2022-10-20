@@ -1,7 +1,7 @@
-import {MovieInfo} from "../components";
+import {MovieInfo} from "../../components";
 import {useLocation} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {moviesActions} from "../redux";
+import {moviesActions} from "../../redux";
 import {useEffect} from "react";
 
 function MovieInfoPage() {

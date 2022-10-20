@@ -1,7 +1,9 @@
+import css from './adultWarning.module.css';
+
 function AdultWarning() {
 
     return (
-        <div>
+        <div className={css.wrap}>
             18+
         </div>
     );

@@ -1,3 +1,20 @@
+.wrap{
+    position: fixed;
+    top: 85px;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 4px solid cyan;
+    border-top: 4px solid cyan;
+    border-bottom: 4px solid cyan;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f1724;
+}
+
 .input{
     height: 0;
     width: 0;
@@ -5,11 +22,11 @@
 }
 .label {
     cursor: pointer;
-    width: 80px;
-    height: 35px;
-    background: silver;
+    width: 60px;
+    height: 25px;
+    background: cyan;
     display: block;
-    border-radius: 35px;
+    border-radius: 25px;
     position: relative;
 }
 .label:after {
@@ -17,14 +34,14 @@
     position: absolute;
     top: 3px;
     left: 3px;
-    width: 29px;
-    height: 29px;
-    background: white;
+    width: 19px;
+    height: 19px;
+    background: #0f1724;
     border-radius: 50%;
     transition: 300ms;
 }
 .input:checked + .label{
-    background: lightgreen;
+    background: coral;
 }
 .input:checked + .label:after {
     left: calc(100% - 3px);

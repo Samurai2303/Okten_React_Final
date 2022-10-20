@@ -1,0 +1,9 @@
+.wrap{
+    width: calc(100% - 350px);
+    margin: 40px 0 0 324px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}

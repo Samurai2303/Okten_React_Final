@@ -10,3 +10,5 @@ export * from './userInfo/UserInfo';
 export * from './adultWarning/AdultWarning';
 export * from './addToFavourite/AddToFavourite';
 export * from './switcher/Switcher';
+export * from './loadingComponent/LoadingComponent';
+

@@ -1,0 +1,34 @@
+.small{
+    height: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.big{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.small img{
+    height: 100%;
+}
+
+.big img{
+    width: 100%;
+}
+
+.noPoster {
+    width: 230px;
+    height: 35px;
+    box-shadow: 0 0 10px 3px cyan inset;
+    border: 3px solid cyan;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    color: cyan;
+    font-size: 25px;
+    font-weight: 650;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

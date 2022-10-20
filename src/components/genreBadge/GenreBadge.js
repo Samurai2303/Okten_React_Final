@@ -1,7 +1,9 @@
+import css from './genreBadge.module.css';
+
 function GenreBadge({genres}) {
 
   return (
-      <div>{genres}</div>
+      <div className={css.wrap}>{genres}</div>
   );
 }
 

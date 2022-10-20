@@ -22,7 +22,11 @@ function Header() {
 
     return (
         <div className={css.wrap}>
-            <p>Find Movie</p>
+            <div className={css.historyBtn}>
+                <button className={css.btnL}><i className="fa-solid fa-arrow-left"></i></button>
+                <button className={css.btnR}><i className="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <p className={css.siteName}>Find Movie</p>
             <form onSubmit={handleSubmit(submit)}>
                 <input type="text" placeholder={'Enter movie name'} {...register('movieName', {required: true})}/>
                 <button disabled={!isValid}>Search</button>

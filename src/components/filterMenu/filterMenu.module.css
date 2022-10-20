@@ -1,0 +1,76 @@
+.wrap {
+    position: fixed;
+    top: 70px;
+    width: 300px;
+    height: 100vh;
+    border-right: 5px solid cyan;
+    background: #0f1724;
+    padding: 20px 10px 10px 10px;
+    color: white;
+}
+
+.genresWrap {
+    width: 250px;
+    height: 33px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 3px solid cyan;
+    padding: 5px;
+    color: cyan;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.searchByGenres {
+    margin: 1px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.searchByGenres i {
+    border-radius: 4px;
+    padding: 2px;
+    border: 3px solid cyan;
+    box-shadow: 0 0 8px 0 cyan inset;
+    transition: 100ms;
+}
+
+.searchByGenres i:hover {
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 cyan;
+}
+
+.searchByGenres i:active {
+    cursor: pointer;
+    background: cyan;
+    color: black;
+}
+
+.opened {
+    height: 480px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin: 2px;
+}
+
+input {
+    opacity: 20%;
+}
+
+input:checked {
+    opacity: 100%;
+}
+
+.opened > p > i {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+

@@ -1,6 +1,8 @@
 import {useDispatch, useSelector} from "react-redux";
 import {MoviesListCard} from "../moviesListCard/MoviesListCard";
 import {moviesActions} from "../../redux";
+import css from './moviesList.module.css';
+import {LoadingComponent} from "../loadingComponent/LoadingComponent";
 
 function MoviesList() {
 
@@ -20,8 +22,8 @@ function MoviesList() {
     }
 
     return (
-        <div>
-            {moviesLoading && <p>Loading...</p>}
+        <div className={css.wrap}>
+            {moviesLoading && <LoadingComponent/>}
             {moviesError && <p>Error(</p>}
             {movies.length ? movies.map(value => <MoviesListCard movie={value} key={value.id}/>) :
                 <p>No movies found...</p>}

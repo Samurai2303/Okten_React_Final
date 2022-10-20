@@ -1,9 +1,81 @@
 .wrap {
+    padding: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 40px;
-    background: silver;
-    border-bottom: 2px solid darkgray;
+    height: 50px;
+    background: #0f1724;
+    border-bottom: 3px solid cyan;
+    box-shadow: 0 0 10px 1px cyan;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
 }
+
+.siteName {
+    border-radius: 20px;
+    background: #11ece5;
+    width: 150px;
+    height: 30px;
+    color: black;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historyBtn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid cyan;
+}
+
+.historyBtn button {
+    width: 35px;
+    height: 25px;
+    color: cyan;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    background: inherit;
+}
+
+.btnL {
+    border-right: 3px solid cyan;
+}
+
+.btnR {
+    border-left: 3px solid cyan;
+}
+
+.btnL:active{
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 4px 0 cyan;
+    border: 2px black;
+    border-radius: 10px;
+}
+
+.btnR:active{
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 4px 0 cyan;
+    border: 2px black;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
 

@@ -1,16 +1,17 @@
 import StarRatings from "react-star-ratings/build/star-ratings";
+import css from './starsRating.module.css';
 
 function StarsRating({rating}) {
 
     return (
-        <div>
+        <div className={css.wrap}>
             <StarRatings
                 rating={rating}
                 numberOfStars={10}
-                starRatedColor={'darkred'}
-                starEmptyColor={'silver'}
-                starDimension={'15px'}
-                starSpacing={'4px'}
+                starRatedColor={'cyan'}
+                starEmptyColor={'#005E5EFF'}
+                starDimension={'16px'}
+                starSpacing={'2px'}
             />
         </div>
     );
