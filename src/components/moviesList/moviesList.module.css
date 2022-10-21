@@ -1,9 +1,109 @@
 .wrap{
-    width: calc(100% - 350px);
-    margin: 40px 0 0 324px;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
 }
+
+.navigationBtns {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid cyan;
+    background: #0f1724;
+}
+.btnL{
+    color: cyan;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3px;
+    border: 3px solid #0f1724;
+    border-right: 3px solid cyan;
+    border-radius: 1px;
+    background: inherit;
+    font-weight: 650;
+    height: 30px;
+    transition: 100ms;
+}
+
+.btnR {
+    color: cyan;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+    border: 3px solid #0f1724;
+    border-left: 3px solid cyan;
+    border-radius: 1px;
+    background: inherit;
+    font-weight: 650;
+    height: 30px;
+    transition: 100ms;
+}
+
+.btnL:hover, .btnR:hover {
+    box-shadow: 0 0 10px 2px cyan, 0 0 10px 2px cyan inset;
+    border: 3px solid cyan;
+    border-radius: 4px;
+}
+
+.btnL:active, .btnR:active{
+    color: black;
+    background: cyan;
+    box-shadow: 0 0 10px 5px cyan;
+    border: 3px solid cyan;
+}
+
+.mainWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 350px);
+    margin: 40px 0 0 324px;
+    padding: 20px;
+}
+
+.btnL:disabled{
+    color: #008383;
+    border: none;
+}
+.btnR:disabled{
+    color: #008383;
+    border: none;
+}
+.btnR:disabled:active .btnL:disabled:active {
+    background: #0f1724;
+}
+
+.noMovies {
+    position: fixed;
+    bottom: 20px;
+}
+
+.noMoviesFound {
+    color: cyan;
+    width: 230px;
+    height: 40px;
+    border: 3px solid cyan;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    box-shadow: 0 0 10px 3px cyan, 0 0 10px 2px cyan inset;
+    font-size: 25px;
+    font-weight: 550;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+

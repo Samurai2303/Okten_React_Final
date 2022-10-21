@@ -3,3 +3,8 @@
     margin-top: 40px;
     background: black;
 }
+.wrapL{
+    display: flex;
+    margin-top: 40px;
+    background: #c3e9ff;
+}

@@ -1,0 +1,10 @@
+.wrap{
+    background: black;
+    width: calc(100vw - 17px);
+    height: calc(100vh - 30px);
+}
+.wrapL{
+    width: calc(100vw - 17px);
+    height: calc(100vh - 30px);
+    background: #c3e9ff;
+}

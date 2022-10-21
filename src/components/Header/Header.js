@@ -4,6 +4,7 @@ import {UserInfo} from "../userInfo/UserInfo";
 import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux";
 import {useNavigate} from "react-router-dom";
+import {LoadingComponent} from "../loadingComponent/LoadingComponent";
 
 function Header() {
 
@@ -22,16 +23,16 @@ function Header() {
 
     return (
         <div className={css.wrap}>
-            <div className={css.historyBtn}>
-                <button className={css.btnL}><i className="fa-solid fa-arrow-left"></i></button>
-                <button className={css.btnR}><i className="fa-solid fa-arrow-right"></i></button>
-            </div>
             <p className={css.siteName}>Find Movie</p>
-            <form onSubmit={handleSubmit(submit)}>
-                <input type="text" placeholder={'Enter movie name'} {...register('movieName', {required: true})}/>
-                <button disabled={!isValid}>Search</button>
+            <form className={css.form} onSubmit={handleSubmit(submit)}>
+                <input className={css.input} type="text"
+                       placeholder={'Enter movie name'} {...register('movieName', {required: true})}/>
+                <button className={css.searchBtn} disabled={!isValid}><i className="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
-            {moviesLoading && <p>Loading...</p>}
+            <div className={css.loadingBox}>
+                {moviesLoading && <LoadingComponent/>}
+            </div>
             <UserInfo/>
         </div>
     );

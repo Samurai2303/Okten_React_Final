@@ -6,7 +6,18 @@
     border-right: 5px solid cyan;
     background: #0f1724;
     padding: 20px 10px 10px 10px;
-    color: white;
+    box-shadow: 0 0 10px 3px cyan;
+}
+
+.wrapL {
+    position: fixed;
+    top: 70px;
+    width: 300px;
+    height: 100vh;
+    border-right: 5px solid #0f1724;
+    background: lightskyblue;
+    padding: 20px 10px 10px 10px;
+    box-shadow: 0 0 10px 3px #0f1724;
 }
 
 .genresWrap {
@@ -21,7 +32,26 @@
     transition: 300ms;
 }
 
+.genresWrapL {
+    width: 250px;
+    height: 33px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 3px solid #0f1724;
+    padding: 5px;
+    color: #0f1724;
+    overflow: hidden;
+    transition: 300ms;
+    background: #6aa3c5;
+}
+
 .searchByGenres {
+    margin: 1px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.searchByGenresL {
     margin: 1px;
     font-size: 25px;
     font-weight: 600;
@@ -32,7 +62,15 @@
     padding: 2px;
     border: 3px solid cyan;
     box-shadow: 0 0 8px 0 cyan inset;
-    transition: 100ms;
+    transition: 150ms;
+}
+
+.searchByGenresL i {
+    border-radius: 4px;
+    padding: 2px;
+    border: 3px solid #0f1724;
+    box-shadow: 0 0 8px 0 #0f1724 inset;
+    transition: 150ms;
 }
 
 .searchByGenres i:hover {
@@ -40,10 +78,22 @@
     box-shadow: 0 0 8px 0 cyan;
 }
 
+.searchByGenresL i:hover {
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 #0f1724;
+}
+
 .searchByGenres i:active {
     cursor: pointer;
     background: cyan;
     color: black;
+}
+
+.searchByGenresL i:active {
+    cursor: pointer;
+    background: #0f1724;
+    color: white;
+    box-shadow: 0 0 8px 1px #0f1724;
 }
 
 .opened {
@@ -68,8 +118,73 @@ input:checked {
     transform: rotate(180deg);
 }
 
+.searchBtn {
+    margin: 10px;
+    width: 80px;
+    height: 35px;
+    background: #0f1724;
+    border: 3px solid cyan;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px cyan, 0 0 10px 3px cyan inset;
+    color: cyan;
+    font-size: 22px;
+    font-weight: 650;
+    overflow: hidden;
+    transition: 100ms;
+}
+.searchBtnL {
+    margin: 10px;
+    width: 80px;
+    height: 35px;
+    background: #6aa3c5;
+    border: 3px solid #0f1724;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #0f1724, 0 0 10px 3px #0f1724 inset;
+    color: #0f1724;
+    font-size: 22px;
+    font-weight: 650;
+    overflow: hidden;
+    transition: 100ms;
+}
 
+.searchBtn:hover {
+    box-shadow: 0 0 15px 4px cyan;
+}
+.searchBtnL:hover {
+    box-shadow: 0 0 15px 4px #0f1724;
+}
 
+.searchBtn:active {
+    background: cyan;
+    color: black;
+}
+
+.searchBtnL:active {
+    background: #0f1724;
+    color: white;
+}
+
+.adult {
+    color: cyan;
+}
+.adultL {
+    color: #0f1724;
+}
+
+.select {
+    background: #0f1724;
+    color: cyan;
+    border: 2px solid cyan;
+    outline: cyan;
+    border-radius: 4px;
+}
+.selectL {
+    background: #6aa3c5;
+    color: #0f1724;
+    border: 2px solid #0f1724;
+    outline: #0f1724;
+    border-radius: 4px;
+}
 
 
 

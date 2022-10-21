@@ -1,6 +1,6 @@
 import {Route, Routes} from "react-router-dom";
 import {MainLayout} from "./layouts";
-import {MovieInfoPage, MoviesPage} from "./pages";
+import {MovieInfoPage, MoviesPage, NotFoundPage} from "./pages";
 
 function App() {
     return (
@@ -9,6 +9,7 @@ function App() {
                 <Route path={'/'} element={<MainLayout/>}>
                     <Route index element={<MoviesPage/>}/>
                     <Route path={'/movieInfo'} element={<MovieInfoPage/>}/>
+                    <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>
 

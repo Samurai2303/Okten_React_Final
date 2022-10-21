@@ -8,8 +8,8 @@ function FilterMenu() {
 
     let {handleSubmit, register} = useForm();
     let dispatch = useDispatch();
+    let {theme} = useSelector(state => state.switcherReducer);
     let {genres, genresError} = useSelector(state => state.genresReducer);
-    let {moviesLoading} = useSelector(state => state.moviesReducer);
 
     useEffect(() => {
         dispatch(genresActions.getAll());
@@ -39,19 +39,19 @@ function FilterMenu() {
     }
 
     return (
-        <div className={css.wrap}>
+        <div className={theme === 'light'?`${css.wrap}`:`${css.wrapL}`}>
             <form onSubmit={handleSubmit(submit)}>
-                <div className={css.genresWrap} id={'genresWrap'}>
-                    <p className={css.searchByGenres}>Search by genres <i
-                            className={'fa-solid fa-arrow-down'}
-                            onClick={() => arrowClick()}></i></p>
+                <div className={theme==='light'?`${css.genresWrap}`:`${css.genresWrapL}`} id={'genresWrap'}>
+                    <p className={theme==='light'?`${css.searchByGenres}`:`${css.searchByGenresL}`}>Search by genres <i
+                        className={'fa-solid fa-arrow-down'}
+                        onClick={() => arrowClick()}></i></p>
                     {genresError && <p>Error(</p>}
                     {genres.length ? genres.map((value, index) => <label key={index}>
                         <input key={index} type={'checkbox'} {...register(`${value.name}`)}/> {value.name}
                     </label>) : false}
                 </div>
-                <label><input type='checkbox' {...register('adult')}/>Show adult films</label>
-                <select onChange={(event) => change(event)}>
+                <label className={theme==='light'?`${css.adult}`:`${css.adultL}`}><input type='checkbox' {...register('adult')}/>Show adult films</label>
+                <select onChange={(event) => change(event)} className={theme==='light'?`${css.select}`:`${css.selectL}`}>
                     <option value={'popularity.asc'}>popularity.asc</option>
                     <option value={'popularity.desc'}>popularity.desc</option>
                     <option value={'release_date.asc'}>release_date.asc</option>
@@ -67,9 +67,8 @@ function FilterMenu() {
                     <option value={'vote_count.asc'}>vote_count.asc</option>
                     <option value={'vote_count.desc'}>vote_count.desc</option>
                 </select>
-                <button>Search</button>
+                <button className={theme==='light'?`${css.searchBtn}`:`${css.searchBtnL}`}>Search</button>
             </form>
-            {moviesLoading && <p>Loading...</p>}
         </div>
     );
 }

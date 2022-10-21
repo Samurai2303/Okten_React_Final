@@ -25,14 +25,14 @@ function MoviesListCard({movie}) {
 
     return (
         <div onClick={() => click()} className={css.wrap}>
-            <PosterPreview path={movie.poster_path ? movie.poster_path : movie.backdrop_path} width={'small'}/>
+            <PosterPreview path={movie.poster_path} width={'small'}/>
             <div className={css.titleAndA}>
                 <p className={css.title}>{movie.title}</p>
                 {movie.adult && <AdultWarning/>}
             </div>
             <GenreBadge genres={genres}/>
             <div className={css.starsAndF}>
-                <StarsRating rating={movie.vote_average}/>
+                <StarsRating size={'small'} rating={movie.vote_average}/>
                 <AddToFavourite/>
             </div>
         </div>

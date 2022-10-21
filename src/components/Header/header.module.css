@@ -16,60 +16,71 @@
 .siteName {
     border-radius: 20px;
     background: #11ece5;
+    width: 160px;
+    height: 35px;
+    color: black;
+    font-weight: 750;
+    font-size: 24px;
+    font-family: Algerian, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.siteName:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    box-shadow: 0 0 10px 3px cyan;
     width: 150px;
-    height: 30px;
-    color: black;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 1px;
+    background: cyan;
 }
 
-.historyBtn {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90px;
-    height: 25px;
-    padding: 5px;
-    border-radius: 10px;
-    border: 3px solid cyan;
+.siteName:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    box-shadow: 0 0 10px 3px cyan;
+    width: 150px;
+    height: 1px;
+    background: cyan;
 }
 
-.historyBtn button {
+.searchBtn {
     width: 35px;
-    height: 25px;
+    height: 35px;
+    border: 3px solid cyan;
+    border-radius: 5px;
     color: cyan;
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    box-shadow: 0 0 8px 2px cyan, 0 0 6px 1px cyan inset;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 900;
-    background: inherit;
+    background: #0f1724;
+    transition: 150ms;
 }
 
-.btnL {
-    border-right: 3px solid cyan;
+.searchBtn:hover {
+    box-shadow: 0 0 10px 3px cyan;
 }
 
-.btnR {
-    border-left: 3px solid cyan;
-}
-
-.btnL:active{
+.searchBtn:active {
     background: cyan;
     color: black;
-    box-shadow: 0 0 4px 0 cyan;
-    border: 2px black;
-    border-radius: 10px;
 }
 
-.btnR:active{
-    background: cyan;
-    color: black;
-    box-shadow: 0 0 4px 0 cyan;
-    border: 2px black;
-    border-radius: 10px;
+.form{
+    display: flex;
+}
+
+.loadingBox{
+    position: absolute;
+    top: 15px;
+    left: 20px;
 }
 
 
