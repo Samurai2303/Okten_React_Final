@@ -4,15 +4,23 @@
     right: 0;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border-left: 4px solid cyan;
-    border-top: 4px solid cyan;
-    border-bottom: 4px solid cyan;
     width: 100px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.wrapColor{
+    border-left: 4px solid cyan;
+    border-top: 4px solid cyan;
+    border-bottom: 4px solid cyan;
     background: #0f1724;
+}
+.wrapColorL {
+    border-left: 4px solid #0f1724;
+    border-top: 4px solid #0f1724;
+    border-bottom: 4px solid #0f1724;
+    background: lightskyblue;
 }
 
 .input{
@@ -41,9 +49,10 @@
     transition: 300ms;
 }
 .input:checked + .label{
-    background: coral;
+    background: #0f1724;
 }
 .input:checked + .label:after {
     left: calc(100% - 3px);
     transform: translateX(-100%);
+    background: white;
 }

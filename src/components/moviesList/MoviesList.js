@@ -2,12 +2,12 @@ import {useDispatch, useSelector} from "react-redux";
 import {MoviesListCard} from "../moviesListCard/MoviesListCard";
 import {moviesActions} from "../../redux";
 import css from './moviesList.module.css';
-import {LoadingComponent} from "../loadingComponent/LoadingComponent";
 import {ErrorComponent} from "../errorComponent/ErrorComponent";
 
 function MoviesList() {
 
-    let {movies, pagesAmount, queryPage, flag, moviesLoading, moviesError} = useSelector(state => state.moviesReducer);
+    let {theme} = useSelector(state => state.switcherReducer);
+    let {movies, pagesAmount, queryPage, flag, moviesError} = useSelector(state => state.moviesReducer);
     let dispatch = useDispatch();
 
     function prev() {
@@ -27,13 +27,13 @@ function MoviesList() {
             <div className={css.wrap}>
                 {moviesError && <ErrorComponent/>}
                 {movies.length ? movies.map(value => <MoviesListCard movie={value} key={value.id}/>) :
-                    <p className={css.noMoviesFound}>No movies found...</p>}
+                    <p className={theme==='light'?`${css.noMoviesFound} ${css.noMoviesFoundColor}`:`${css.noMoviesFound} ${css.noMoviesFoundColorL}`}>No movies found...</p>}
             </div>
-            <div className={movies.length?`${css.navigationBtns}`:`${css.navigationBtns} ${css.noMovies}`}>
-                <button disabled={queryPage === 1} onClick={() => prev()} className={css.btnL}>
+            <div className={movies.length? theme==='light'?`${css.navigationBtns} ${css.navigationBtnsColor}`:`${css.navigationBtns} ${css.navigationBtnsColorL}`: theme==='light'?`${css.navigationBtns} ${css.navigationBtnsColor} ${css.noMovies}`:`${css.navigationBtns} ${css.navigationBtnsColorL} ${css.noMovies}`}>
+                <button disabled={queryPage === 1} onClick={() => prev()} className={theme==='light'?`${css.btnL} ${css.btnLColor}`:`${css.btnL} ${css.btnLColorL}`}>
                     <i className="fa-solid fa-arrow-left-long"></i>
                 </button>
-                <button disabled={queryPage === pagesAmount} onClick={() => next()} className={css.btnR}>
+                <button disabled={queryPage === pagesAmount} onClick={() => next()} className={theme==='light'?`${css.btnR} ${css.btnRColor}`:`${css.btnR} ${css.btnRColorL}`}>
                     <i className="fa-solid fa-arrow-right-long"></i>
                 </button>
             </div>

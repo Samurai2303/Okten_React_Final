@@ -13,7 +13,7 @@ function Switcher() {
     }
 
     return (
-        <div className={css.wrap}>
+        <div className={theme==='light'?`${css.wrap} ${css.wrapColor}`:`${css.wrap} ${css.wrapColorL}`}>
             <input type="checkbox" id={"switch"} className={css.input} onChange={() => change()}/>
             <label htmlFor={"switch"} className={css.label}></label>
         </div>

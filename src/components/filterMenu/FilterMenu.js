@@ -52,20 +52,20 @@ function FilterMenu() {
                 </div>
                 <label className={theme==='light'?`${css.adult}`:`${css.adultL}`}><input type='checkbox' {...register('adult')}/>Show adult films</label>
                 <select onChange={(event) => change(event)} className={theme==='light'?`${css.select}`:`${css.selectL}`}>
-                    <option value={'popularity.asc'}>popularity.asc</option>
-                    <option value={'popularity.desc'}>popularity.desc</option>
-                    <option value={'release_date.asc'}>release_date.asc</option>
-                    <option value={'release_date.desc'}>release_date.desc</option>
-                    <option value={'revenue.asc'}>revenue.asc</option>
-                    <option value={'revenue.desc'}>revenue.desc</option>
-                    <option value={'primary_release_date.asc'}>primary_release_date.asc</option>
-                    <option value={'primary_release_date.desc'}>primary_release_date.desc</option>
-                    <option value={'original_title.asc'}>original_title.asc</option>
-                    <option value={'original_title.desc'}>original_title.desc</option>
-                    <option value={'vote_average.asc'}>vote_average.asc</option>
-                    <option value={'vote_average.desc'}>vote_average.desc</option>
-                    <option value={'vote_count.asc'}>vote_count.asc</option>
-                    <option value={'vote_count.desc'}>vote_count.desc</option>
+                    <option value={'popularity.asc'}>Popularity asc.</option>
+                    <option value={'popularity.desc'}>Popularity desc.</option>
+                    <option value={'release_date.asc'}>Release date asc.</option>
+                    <option value={'release_date.desc'}>Release date desc.</option>
+                    <option value={'revenue.asc'}>Revenue asc.</option>
+                    <option value={'revenue.desc'}>Revenue desc.</option>
+                    <option value={'primary_release_date.asc'}>Primary release date asc.</option>
+                    <option value={'primary_release_date.desc'}>Primary release date desc.</option>
+                    <option value={'original_title.asc'}>Original title asc.</option>
+                    <option value={'original_title.desc'}>Original title desc.</option>
+                    <option value={'vote_average.asc'}>Average vote asc.</option>
+                    <option value={'vote_average.desc'}>Average vote desc.</option>
+                    <option value={'vote_count.asc'}>Vote count asc.</option>
+                    <option value={'vote_count.desc'}>Vote count desc.</option>
                 </select>
                 <button className={theme==='light'?`${css.searchBtn}`:`${css.searchBtnL}`}>Search</button>
             </form>

@@ -1,12 +1,18 @@
 .wrap{
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    border: 3px solid cyan;
     min-height: 390px;
     padding: 10px;
     width: 250px;
     margin: 10px;
+}
+.wrapColor{
+    border: 3px solid cyan;
     background: #0f1724;
+}
+.wrapColorL{
+    border: 3px solid #0f1724;
+    background: lightskyblue;
 }
 
 .titleAndA{
@@ -15,10 +21,15 @@
 }
 
 .title {
-    color: cyan;
     font-size: 25px;
     font-weight: 600;
     margin: 2px;
+}
+.titleColor{
+    color: cyan;
+}
+.titleColorL{
+    color: #0f1724;
 }
 
 .starsAndF{

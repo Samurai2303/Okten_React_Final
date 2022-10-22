@@ -2,18 +2,30 @@
     height: 250px;
     display: flex;
     justify-content: center;
-    border: 2px solid cyan;
     border-radius: 4px;
+}
+.smallColor{
+    border: 2px solid cyan;
     box-shadow: 0 0 5px 3px cyan;
+}
+.smallColorL{
+    border: 2px solid #0f1724;
+    box-shadow: 0 0 5px 3px #0f1724;
 }
 
 .big{
     height: 400px;
     display: flex;
     justify-content: center;
-    border: 2px solid cyan;
     border-radius: 4px;
+}
+.bigColor {
+    border: 2px solid cyan;
     box-shadow: 0 0 5px 3px cyan;
+}
+.bigColorL {
+    border: 2px solid #0f1724;
+    box-shadow: 0 0 5px 3px #0f1724;
 }
 
 .small img{
@@ -27,14 +39,21 @@
 .noPoster {
     width: 230px;
     height: 35px;
-    box-shadow: 0 0 10px 3px cyan inset;
-    border: 3px solid cyan;
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
-    color: cyan;
     font-size: 25px;
     font-weight: 650;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.noPosterColor{
+    box-shadow: 0 0 10px 3px cyan inset;
+    border: 3px solid cyan;
+    color: cyan;
+}
+.noPosterColorL {
+    box-shadow: 0 0 10px 3px #0f1724 inset;
+    border: 3px solid #0f1724;
+    color: #0f1724;
 }

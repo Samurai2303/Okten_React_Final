@@ -1,8 +1,42 @@
-.wrap{
+.mainWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 350px);
+    margin: 40px 0 0 324px;
+    padding: 20px;
+}
+
+.wrap {
     padding: 15px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.noMoviesFound {
+    width: 230px;
+    height: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    font-size: 25px;
+    font-weight: 550;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noMoviesFoundColor {
+    color: cyan;
+    border: 3px solid cyan;
+    box-shadow: 0 0 10px 3px cyan, 0 0 10px 2px cyan inset;
+}
+
+.noMoviesFoundColorL {
+    color: #0f1724;
+    border: 4px solid #0f1724;
+    box-shadow: 0 0 12px 4px #0f1724, 0 0 12px 3px #0f1724 inset;
 }
 
 .navigationBtns {
@@ -13,73 +47,18 @@
     align-items: center;
     padding: 5px;
     border-radius: 5px;
+}
+
+.navigationBtnsColor {
     border: 3px solid cyan;
     background: #0f1724;
+    box-shadow: 0 0 10px 2px cyan;
 }
-.btnL{
-    color: cyan;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 3px;
+
+.navigationBtnsColorL {
     border: 3px solid #0f1724;
-    border-right: 3px solid cyan;
-    border-radius: 1px;
-    background: inherit;
-    font-weight: 650;
-    height: 30px;
-    transition: 100ms;
-}
-
-.btnR {
-    color: cyan;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 3px;
-    border: 3px solid #0f1724;
-    border-left: 3px solid cyan;
-    border-radius: 1px;
-    background: inherit;
-    font-weight: 650;
-    height: 30px;
-    transition: 100ms;
-}
-
-.btnL:hover, .btnR:hover {
-    box-shadow: 0 0 10px 2px cyan, 0 0 10px 2px cyan inset;
-    border: 3px solid cyan;
-    border-radius: 4px;
-}
-
-.btnL:active, .btnR:active{
-    color: black;
-    background: cyan;
-    box-shadow: 0 0 10px 5px cyan;
-    border: 3px solid cyan;
-}
-
-.mainWrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(100% - 350px);
-    margin: 40px 0 0 324px;
-    padding: 20px;
-}
-
-.btnL:disabled{
-    color: #008383;
-    border: none;
-}
-.btnR:disabled{
-    color: #008383;
-    border: none;
-}
-.btnR:disabled:active .btnL:disabled:active {
-    background: #0f1724;
+    background: lightskyblue;
+    box-shadow: 0 0 12px 3px #0f1724;
 }
 
 .noMovies {
@@ -87,21 +66,96 @@
     bottom: 20px;
 }
 
-.noMoviesFound {
-    color: cyan;
-    width: 230px;
-    height: 40px;
-    border: 3px solid cyan;
-    border-bottom-right-radius: 40px;
-    border-top-left-radius: 40px;
-    box-shadow: 0 0 10px 3px cyan, 0 0 10px 2px cyan inset;
-    font-size: 25px;
-    font-weight: 550;
-    padding: 5px;
+.btnL {
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 3px;
+    border-radius: 1px;
+    background: inherit;
+    font-weight: 650;
+    height: 30px;
+    transition: 100ms;
 }
+
+.btnLColor {
+    color: cyan;
+    border: 3px solid #0f1724;
+    border-right: 3px solid cyan;
+
+}
+
+.btnLColorL {
+    color: #0f1724;
+    border: 3px solid lightskyblue;
+    border-right: 3px solid #0f1724;
+}
+
+.btnR {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+    border-radius: 1px;
+    background: inherit;
+    font-weight: 650;
+    height: 30px;
+    transition: 100ms;
+}
+
+.btnRColor {
+    color: cyan;
+    border: 3px solid #0f1724;
+    border-left: 3px solid cyan;
+}
+
+.btnRColorL {
+    color: #0f1724;
+    border: 3px solid lightskyblue;
+    border-left: 3px solid #0f1724;
+}
+
+.btnLColor:hover, .btnRColor:hover {
+    box-shadow: 0 0 10px 2px cyan, 0 0 10px 2px cyan inset;
+    border: 3px solid cyan;
+    border-radius: 4px;
+}
+.btnLColorL:hover, .btnRColorL:hover {
+    box-shadow: 0 0 10px 2px #0f1724, 0 0 10px 2px #0f1724 inset;
+    border: 3px solid #0f1724;
+    border-radius: 4px;
+}
+
+.btnLColor:active, .btnRColor:active {
+    color: black;
+    background: cyan;
+    box-shadow: 0 0 10px 5px cyan;
+    border: 3px solid cyan;
+}
+.btnLColorL:active, .btnRColorL:active {
+    color: white;
+    background: #0f1724;
+    box-shadow: 0 0 10px 5px #0f1724;
+    border: 3px solid #0f1724;
+}
+
+.btnLColor:disabled, .btnRColor:disabled {
+    color: #008383;
+    border: none;
+}
+.btnLColorL:disabled, .btnRColorL:disabled {
+    color: #0f1724;
+    border: none;
+}
+
+.btnRColorL:disabled:active, .btnLColorL:disabled:active {
+    background: #0f1724;
+    color: #3b5a6c;
+}
+
+
 
 
 

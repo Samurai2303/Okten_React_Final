@@ -11,6 +11,7 @@ function MoviesListCard({movie}) {
 
     let navigate = useNavigate();
     let {genres: genresList} = useSelector(state => state.genresReducer);
+    let {theme} = useSelector(state => state.switcherReducer);
 
     let genres = '';
     for (let genreId of movie.genre_ids) {
@@ -24,10 +25,10 @@ function MoviesListCard({movie}) {
     }
 
     return (
-        <div onClick={() => click()} className={css.wrap}>
+        <div onClick={() => click()} className={theme==='light'?`${css.wrap} ${css.wrapColor}`:`${css.wrap} ${css.wrapColorL}`}>
             <PosterPreview path={movie.poster_path} width={'small'}/>
             <div className={css.titleAndA}>
-                <p className={css.title}>{movie.title}</p>
+                <p className={theme==='light'?`${css.title} ${css.titleColor}`:`${css.title} ${css.titleColorL}`}>{movie.title}</p>
                 {movie.adult && <AdultWarning/>}
             </div>
             <GenreBadge genres={genres}/>

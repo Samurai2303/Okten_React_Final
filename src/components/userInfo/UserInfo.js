@@ -1,12 +1,14 @@
 import css from './userInfo.module.css';
+import {useSelector} from "react-redux";
 
 function UserInfo() {
 
+    let {theme} = useSelector(state => state.switcherReducer);
+
     return (
         <div>
-            <div className={css.wrap}></div>
-            <p className={css.p}>User</p>
-
+            <div className={theme === 'light' ? `${css.wrap} ${css.wrapColor}` : `${css.wrap} ${css.wrapColorL}`}></div>
+            <p className={theme === 'light' ? `${css.p} ${css.pColor}` : `${css.p} ${css.pColorL}`}>User</p>
         </div>
     );
 }

@@ -169,6 +169,7 @@ input:checked {
 }
 .adultL {
     color: #0f1724;
+    font-weight: 550;
 }
 
 .select {

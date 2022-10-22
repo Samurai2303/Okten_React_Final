@@ -1,22 +1,29 @@
-.wrap{
+.wrap {
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    background: cyan;
-    box-shadow: 0 0 8px 1px cyan;
     overflow: hidden;
 }
-.wrap:after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background: #0f1724;
-    position: relative;
-    bottom: -10px;
+
+.wrapColor {
+    background: cyan;
+    box-shadow: 0 0 8px 1px cyan;
 }
 
-.p{
-    color: cyan;
+.wrapColorL {
+    background: lightskyblue;
+    box-shadow: 0 0 8px 1px lightskyblue;
+}
+
+.p {
     margin: 0;
     font-weight: 600;
+}
+
+.pColor {
+    color: cyan;
+}
+
+.pColorL {
+    color: lightskyblue;
 }

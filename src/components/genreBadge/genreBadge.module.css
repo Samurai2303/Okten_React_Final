@@ -1,7 +1,5 @@
 .wrap {
     display: inline-block;
-    background: cyan;
-    color: black;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
@@ -10,3 +8,12 @@
     font-weight: 650;
     max-width: 95%;
 }
+.wrapColor{
+    background: cyan;
+    color: black;
+}
+.wrapColorL {
+    background: lightskyblue;
+    color: #0f1724;
+}
+

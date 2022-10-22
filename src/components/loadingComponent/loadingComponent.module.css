@@ -2,10 +2,19 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    animation: rotate 700ms linear infinite;
+}
+
+.loadingColor {
     border-top: 4px solid cyan;
     border-bottom: 4px solid cyan;
-    animation: rotate 700ms linear infinite;
     box-shadow: 0 0 10px 5px cyan, 0 0 10px 5px cyan inset;
+}
+
+.loadingColorL {
+    border-top: 4px solid lightskyblue;
+    border-bottom: 4px solid lightskyblue;
+    box-shadow: 0 0 10px 5px lightskyblue, 0 0 10px 5px lightskyblue inset;
 }
 
 @keyframes rotate {

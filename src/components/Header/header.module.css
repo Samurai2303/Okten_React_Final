@@ -5,17 +5,24 @@
     align-items: center;
     height: 50px;
     background: #0f1724;
-    border-bottom: 3px solid cyan;
-    box-shadow: 0 0 10px 1px cyan;
     position: fixed;
     top: 0;
     width: 100vw;
     z-index: 2;
 }
 
+.wrapShadow {
+    box-shadow: 0 0 10px 1px cyan;
+    border-bottom: 3px solid cyan;
+}
+
+.wrapShadowL {
+    box-shadow: 0 0 12px 4px #0f1724;
+    border-bottom: 3px solid lightskyblue;
+}
+
 .siteName {
     border-radius: 20px;
-    background: #11ece5;
     width: 160px;
     height: 35px;
     color: black;
@@ -28,62 +35,107 @@
     overflow: hidden;
 }
 
+.siteNameColor {
+    background: #11ece5;
+}
+
+.siteNameColorL {
+    background: lightskyblue;
+}
+
 .siteName:after {
     content: '';
     position: absolute;
     bottom: 10px;
-    box-shadow: 0 0 10px 3px cyan;
     width: 150px;
     height: 1px;
+}
+
+.siteNameColor:after {
+    box-shadow: 0 0 10px 3px cyan;
     background: cyan;
+}
+
+.siteNameColorL:after {
+    box-shadow: 0 0 10px 3px lightskyblue;
+    background: lightskyblue;
 }
 
 .siteName:before {
     content: '';
     position: absolute;
     top: 10px;
-    box-shadow: 0 0 10px 3px cyan;
     width: 150px;
     height: 1px;
+}
+
+.siteNameColor:before {
+    box-shadow: 0 0 10px 3px cyan;
     background: cyan;
+}
+
+.siteNameColorL:before {
+    box-shadow: 0 0 10px 3px lightskyblue;
+    background: lightskyblue;
 }
 
 .searchBtn {
     width: 35px;
     height: 35px;
-    border: 3px solid cyan;
     border-radius: 5px;
-    color: cyan;
     font-size: 22px;
     font-weight: 700;
-    box-shadow: 0 0 8px 2px cyan, 0 0 6px 1px cyan inset;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0f1724;
     transition: 150ms;
 }
 
-.searchBtn:hover {
+.searchBtnColor {
+    border: 3px solid cyan;
+    color: cyan;
+    box-shadow: 0 0 8px 2px cyan, 0 0 6px 1px cyan inset;
+    background: #0f1724;
+}
+
+.searchBtnColorL {
+    border: 3px solid lightskyblue;
+    color: lightskyblue;
+    box-shadow: 0 0 8px 2px lightskyblue, 0 0 8px 1px lightskyblue inset;
+    background: #0f1724;
+}
+
+.searchBtnColor:hover {
     box-shadow: 0 0 10px 3px cyan;
 }
 
-.searchBtn:active {
+.searchBtnColorL:hover {
+    box-shadow: 0 0 10px 3px lightskyblue;
+}
+
+.searchBtnColor:active {
     background: cyan;
     color: black;
 }
 
-.form{
+.searchBtnColorL:active {
+    background: lightskyblue;
+    color: black;
+}
+
+.form {
     display: flex;
 }
 
-.loadingBox{
+.loadingBox {
     position: absolute;
     top: 15px;
     left: 20px;
 }
 
-
+.input {
+    caret-color: #0f1724;
+}
 
 
 
