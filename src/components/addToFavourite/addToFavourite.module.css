@@ -9,4 +9,7 @@
     color: #0f1724;
     background: inherit;
 }
+.wrap:hover, .wrapL:hover {
+    cursor: pointer;
+}
 

@@ -9,7 +9,7 @@ function ToFavourites() {
     let {theme} = useSelector(state => state.switcherReducer);
 
     return (
-        <div className={css.wrap} onClick={() => navigate('/favourites')}>
+        <div className={theme==='light'?`${css.wrap}`:`${css.wrapL}`} onClick={() => navigate('/favourites')}>
             <div className={theme==='light'?`${css.heart}`:`${css.heartL}`}>
                 <i className="fa-solid fa-heart"></i>
             </div>

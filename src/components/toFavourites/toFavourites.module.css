@@ -1,7 +1,20 @@
-.wrap {
+.wrap, .wrapL {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 100ms;
+    border-radius: 5px;
+}
+
+.wrap:hover {
+    cursor: pointer;
+    outline: 2px solid cyan;
+    box-shadow: 0 0 7px 0 cyan inset;
+}
+.wrapL:hover {
+    cursor: pointer;
+    outline: 2px solid lightskyblue;
+    box-shadow: 0 0 7px 0 lightskyblue inset;
 }
 
 .heart i{
