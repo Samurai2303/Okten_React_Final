@@ -13,8 +13,6 @@ function AddToFavourite({movie}) {
         findIndex = favMovies.findIndex(value => value.id === movie.id);
     }
 
-    console.log(findIndex);
-
     function click() {
 
         if (favMovies?.length) {
@@ -24,6 +22,8 @@ function AddToFavourite({movie}) {
             } else {
                 localStorage.setItem('favorites', JSON.stringify([...favMovies, movie]));
             }
+        } else {
+                localStorage.setItem('favorites', JSON.stringify([movie]));
         }
 
     }
