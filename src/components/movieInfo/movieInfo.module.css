@@ -8,6 +8,7 @@
     border-radius: 3px;
     margin-left: 10px;
     padding-left: 10px;
+    max-width: 650px;
 }
 
 .infoColor {
@@ -25,7 +26,7 @@
 
 .titles {
     margin: 0;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .titlesColor {
@@ -127,14 +128,24 @@
 
 
 .companies {
-    color: cyan;
     border-radius: 10px;
-    border-left: 4px solid cyan;
-    border-right: 4px solid cyan;
     width: 250px;
     padding: 12px;
     font-size: 16px;
+}
+
+.companiesColor{
+    color: cyan;
+    border-left: 4px solid cyan;
+    border-right: 4px solid cyan;
     box-shadow: 0 0 10px 3px cyan inset;
+}
+
+.companiesColorL {
+    color: #0f1724;
+    border-left: 4px solid #0f1724;
+    border-right: 4px solid #0f1724;
+    box-shadow: 0 0 10px 3px #0f1724 inset;
 }
 
 .companies p {

@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom";
+
 import {MainLayout} from "./layouts";
-import {MovieInfoPage, MoviesPage, NotFoundPage} from "./pages";
+import {FavouriteFilmsPage, MovieInfoPage, MoviesPage, NotFoundPage} from "./pages";
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
                 <Route path={'/'} element={<MainLayout/>}>
                     <Route index element={<MoviesPage/>}/>
                     <Route path={'/movieInfo'} element={<MovieInfoPage/>}/>
+                    <Route path={'/favourites'} element={<FavouriteFilmsPage/>}/>
                     <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>

@@ -1,6 +1,7 @@
+import {useSelector} from "react-redux";
+
 import {FilterMenu, MoviesList} from "../../components";
 import css from './moviesPage.module.css';
-import {useSelector} from "react-redux";
 
 function MoviesPage() {
 

@@ -1,21 +1,27 @@
-.wrap{
+.mainWrap {
+    position: relative;
+}
+
+.wrap {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     min-height: 390px;
     padding: 10px;
     width: 250px;
-    margin: 10px;
+    margin: 10px 10px 0 10px;
 }
-.wrapColor{
+
+.wrapColor {
     border: 3px solid cyan;
     background: #0f1724;
 }
-.wrapColorL{
+
+.wrapColorL {
     border: 3px solid #0f1724;
     background: lightskyblue;
 }
 
-.titleAndA{
+.titleAndA {
     display: flex;
     justify-content: space-between;
 }
@@ -25,18 +31,83 @@
     font-weight: 600;
     margin: 2px;
 }
-.titleColor{
+
+.titleColor {
     color: cyan;
 }
-.titleColorL{
+
+.titleColorL {
     color: #0f1724;
 }
 
-.starsAndF{
+.starsAndF {
     display: flex;
     justify-content: space-between;
 }
 
+.description {
+    width: 90%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: inherit;
+    font-size: 16px;
+    padding: 5px;
+    margin: 6px;
+    transition: 200ms;
+    overflow: hidden;
+}
+
+.descriptionColor {
+    border: 2px solid cyan;
+    box-shadow: 0 0 8px 1px cyan;
+    color: cyan;
+    border-top: 4px solid cyan;
+    border-bottom: 4px solid cyan;
+}
+
+.descriptionColorL {
+    border: 2px solid #0f1724;
+    box-shadow: 0 0 8px 1px #0f1724;
+    color: #0f1724;
+    border-top: 4px solid #0f1724;
+    border-bottom: 4px solid #0f1724;
+}
+
+.mainFavWrap {
+    height: 30px;
+    width: 250px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 20px;
+}
+
+.favWrap {
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid cyan;
+    border-right: 2px solid cyan;
+    border-left: 2px solid cyan;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 7px 0 cyan inset;
+}
+.favWrapL {
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid #0f1724;
+    border-right: 2px solid #0f1724;
+    border-left: 2px solid #0f1724;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 7px 0 #0f1724 inset;
+}
 
 
 

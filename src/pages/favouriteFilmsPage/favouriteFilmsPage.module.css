@@ -1,0 +1,48 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.titleColor {
+    color: cyan;
+    border: 3px solid cyan;
+    box-shadow: 0 0 10px 3px cyan, 0 0 15px 2px cyan inset;
+}
+
+.titleColorL {
+    color: #0f1724;
+    border: 3px solid #0f1724;
+    box-shadow: 0 0 10px 3px #0f1724, 0 0 15px 2px #0f1724 inset;
+}
+
+.noMovies {
+    font-size: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-weight: 550;
+}
+
+.noMoviesColor {
+    border: 3px solid cyan;
+    color: cyan;
+    box-shadow: 0 0 15px 2px cyan inset;
+}
+
+.noMoviesColorL {
+    border: 3px solid #0f1724;
+    color: #0f1724;
+    box-shadow: 0 0 15px 2px #0f1724 inset;
+}
+

@@ -1,8 +1,8 @@
 .wrap{
+    padding-top: 5px;
     background: black;
-    min-height: 100vh;
 }
 .wrapL{
+    padding-top: 5px;
     background: #c3e9ff;
-    min-height: 100vh;
 }

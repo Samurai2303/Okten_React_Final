@@ -1,7 +1,8 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {genresActions, moviesActions} from "../../redux";
 import {useForm} from "react-hook-form";
+
+import {genresActions, moviesActions} from "../../redux";
 import css from './filterMenu.module.css';
 
 function FilterMenu() {

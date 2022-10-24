@@ -1,10 +1,12 @@
 import {useForm} from "react-hook-form";
-import css from './header.module.css';
-import {UserInfo} from "../userInfo/UserInfo";
 import {useDispatch, useSelector} from "react-redux";
-import {moviesActions} from "../../redux";
 import {useNavigate} from "react-router-dom";
+
+import {moviesActions} from "../../redux";
+import {UserInfo} from "../userInfo/UserInfo";
 import {LoadingComponent} from "../loadingComponent/LoadingComponent";
+import {ToFavourites} from "../toFavourites/ToFavourites";
+import css from './header.module.css';
 
 function Header() {
 
@@ -34,6 +36,7 @@ function Header() {
                 {moviesLoading && <LoadingComponent/>}
             </div>
             <UserInfo/>
+            <ToFavourites/>
         </div>
     );
 }

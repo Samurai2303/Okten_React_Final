@@ -1,39 +1,46 @@
-.small{
+.small {
     height: 250px;
     display: flex;
     justify-content: center;
     border-radius: 4px;
 }
-.smallColor{
+
+.smallColor {
     border: 2px solid cyan;
     box-shadow: 0 0 5px 3px cyan;
 }
-.smallColorL{
+
+.smallColorL {
     border: 2px solid #0f1724;
     box-shadow: 0 0 5px 3px #0f1724;
 }
 
-.big{
+.big {
     height: 400px;
     display: flex;
     justify-content: center;
     border-radius: 4px;
+    width: 300px;
 }
+
 .bigColor {
     border: 2px solid cyan;
     box-shadow: 0 0 5px 3px cyan;
 }
+
 .bigColorL {
     border: 2px solid #0f1724;
     box-shadow: 0 0 5px 3px #0f1724;
 }
 
-.small img{
-    height: 100%;
+.small img {
+    max-height: 100%;
+    max-width: 100%;
 }
 
-.big img{
-    width: 100%;
+.big img {
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .noPoster {
@@ -47,11 +54,13 @@
     justify-content: center;
     align-items: center;
 }
-.noPosterColor{
+
+.noPosterColor {
     box-shadow: 0 0 10px 3px cyan inset;
     border: 3px solid cyan;
     color: cyan;
 }
+
 .noPosterColorL {
     box-shadow: 0 0 10px 3px #0f1724 inset;
     border: 3px solid #0f1724;

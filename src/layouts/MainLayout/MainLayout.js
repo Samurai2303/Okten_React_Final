@@ -1,7 +1,8 @@
-import {Header, Switcher} from "../../components";
-import {Outlet} from "react-router-dom";
-import css from './mainLayout.module.css'
 import {useSelector} from "react-redux";
+import {Outlet} from "react-router-dom";
+
+import {Header, Switcher} from "../../components";
+import css from './mainLayout.module.css'
 
 function MainLayout() {
 

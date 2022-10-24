@@ -1,5 +1,6 @@
-import css from './genreBadge.module.css';
 import {useSelector} from "react-redux";
+
+import css from './genreBadge.module.css';
 
 function GenreBadge({genres}) {
 

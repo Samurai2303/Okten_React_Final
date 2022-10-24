@@ -1,5 +1,6 @@
-import css from './userInfo.module.css';
 import {useSelector} from "react-redux";
+
+import css from './userInfo.module.css';
 
 function UserInfo() {
 

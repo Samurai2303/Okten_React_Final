@@ -1,6 +1,7 @@
-import css from './switcher.module.css';
 import {useDispatch, useSelector} from "react-redux";
+
 import {switcherActions} from "../../redux";
+import css from './switcher.module.css';
 
 function Switcher() {
 
@@ -9,7 +10,6 @@ function Switcher() {
 
     function change() {
         dispatch(switcherActions.changeTheme());
-        console.log(theme);
     }
 
     return (

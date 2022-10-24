@@ -1,8 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
-import {MoviesListCard} from "../moviesListCard/MoviesListCard";
+
 import {moviesActions} from "../../redux";
-import css from './moviesList.module.css';
+import {MoviesListCard} from "../moviesListCard/MoviesListCard";
 import {ErrorComponent} from "../errorComponent/ErrorComponent";
+import css from './moviesList.module.css';
 
 function MoviesList() {
 

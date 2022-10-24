@@ -1,0 +1,25 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart i{
+    color: cyan;
+    font-size: 25px;
+    /*box-shadow: 0 0 10px 2px cyan;*/
+}
+.heartL i{
+    color: lightskyblue;
+    font-size: 25px;
+    /*box-shadow: 0 0 10px 2px lightskyblue;*/
+}
+
+.text {
+    color: cyan;
+    margin: 2px;
+}
+.textL {
+    color: lightskyblue;
+    margin: 2px;
+}

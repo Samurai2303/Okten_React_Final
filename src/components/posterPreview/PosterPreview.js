@@ -1,6 +1,7 @@
+import {useSelector} from "react-redux";
+
 import {posterUrl} from "../../configs";
 import css from './posterPrewiew.module.css';
-import {useSelector} from "react-redux";
 
 function PosterPreview({path, width}) {
 
